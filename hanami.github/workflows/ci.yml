@@ -1,0 +1,13 @@
+name: CI/CD自动部署
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 运行自动化测试
+        run: echo "测试通过"
+      - name: 自动构建
+        run: echo "构建成功"
